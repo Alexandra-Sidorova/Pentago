@@ -32,90 +32,90 @@ class Board:
     def make_left_rotation_top_right(self):
         tmp_board = self.copy()
         for i in range(3):
-            self._marbles[i][3] = tmp_board._marbles[0][self._count_row - i - 1]
+            self._marbles[3][i] = tmp_board._marbles[self._count_row - i - 1][0]
         for i in range(3):
-            self._marbles[2][3 + i] = tmp_board._marbles[i][3]
+            self._marbles[3 + i][2] = tmp_board._marbles[3][0]
         for i in range(3):
-            self._marbles[i][5] = tmp_board._marbles[2][self._count_row - i - 1]
+            self._marbles[5][i] = tmp_board._marbles[self._count_row - i - 1][2]
         for i in range(3):
-            self._marbles[0][3 + i] = tmp_board._marbles[i][5]
+            self._marbles[3 + i][0] = tmp_board._marbles[5][i]
 
     def make_right_rotation_top_right(self):
         tmp_board = self.copy()
         for i in range(3):
-            self._marbles[i][3] = tmp_board._marbles[2][3 + i]
-        for i in range(3):
-            self._marbles[0][3 + i] = tmp_board._marbles[3 - i - 1][3]
-        for i in range(3):
-            self._marbles[i][5] = tmp_board._marbles[0][3 + i]
-        for i in range(3):
-            self._marbles[2][3 + i] = tmp_board._marbles[3 - i - 1][5]
-
-    def make_left_rotation_top_left(self):
-        tmp_board = self.copy()
-        for i in range(3):
-            self._marbles[i][0] = tmp_board._marbles[0][3 - i - 1]
-        for i in range(3):
-            self._marbles[2][i] = tmp_board._marbles[i][0]
-        for i in range(3):
-            self._marbles[i][2] = tmp_board._marbles[2][3 - i - 1]
-        for i in range(3):
-            self._marbles[0][i] = tmp_board._marbles[i][2]
-
-    def make_right_rotation_top_left(self):
-        tmp_board = self.copy()
-        for i in range(3):
-            self._marbles[i][0] = tmp_board._marbles[2][i]
-        for i in range(3):
-            self._marbles[0][i] = tmp_board._marbles[3 - i - 1][0]
-        for i in range(3):
-            self._marbles[i][2] = tmp_board._marbles[0][i]
-        for i in range(3):
-            self._marbles[2][i] = tmp_board._marbles[3 - i - 1][2]
-
-    def make_left_rotation_down_left(self):
-        tmp_board = self.copy()
+            self._marbles[3][i] = tmp_board._marbles[3 + i][2]
         for i in range(3):
             self._marbles[3 + i][0] = tmp_board._marbles[3][3 - i - 1]
         for i in range(3):
             self._marbles[5][i] = tmp_board._marbles[3 + i][0]
         for i in range(3):
             self._marbles[3 + i][2] = tmp_board._marbles[5][3 - i - 1]
+
+    def make_left_rotation_top_left(self):
+        tmp_board = self.copy()
         for i in range(3):
-            self._marbles[3][i] = tmp_board._marbles[3 + i][2]
+            self._marbles[0][i] = tmp_board._marbles[3 - i - 1][0]
+        for i in range(3):
+            self._marbles[i][2] = tmp_board._marbles[0][i]
+        for i in range(3):
+            self._marbles[2][i] = tmp_board._marbles[3 - i - 1][2]
+        for i in range(3):
+            self._marbles[i][0] = tmp_board._marbles[2][i]
+
+    def make_right_rotation_top_left(self):
+        tmp_board = self.copy()
+        for i in range(3):
+            self._marbles[0][i] = tmp_board._marbles[i][2]
+        for i in range(3):
+            self._marbles[i][0] = tmp_board._marbles[0][3 - i - 1]
+        for i in range(3):
+            self._marbles[2][i] = tmp_board._marbles[i][0]
+        for i in range(3):
+            self._marbles[i][2] = tmp_board._marbles[2][3 - i - 1]
+
+    def make_left_rotation_down_left(self):
+        tmp_board = self.copy()
+        for i in range(3):
+            self._marbles[0][3 + i] = tmp_board._marbles[3 - i - 1][3]
+        for i in range(3):
+            self._marbles[i][5] = tmp_board._marbles[0][3 + i]
+        for i in range(3):
+            self._marbles[2][3 + i] = tmp_board._marbles[3 - i - 1][5]
+        for i in range(3):
+            self._marbles[i][3] = tmp_board._marbles[2][3 + i]
 
     def make_right_rotation_down_left(self):
         tmp_board = self.copy()
         for i in range(3):
-            self._marbles[3 + i][0] = tmp_board._marbles[5][i]
+            self._marbles[0][3 + i] = tmp_board._marbles[i][5]
         for i in range(3):
-            self._marbles[3][i] = tmp_board._marbles[self._count_row - i - 1][0]
+            self._marbles[i][3] = tmp_board._marbles[0][self._count_row - i - 1]
         for i in range(3):
-            self._marbles[3 + i][2] = tmp_board._marbles[3][i]
+            self._marbles[2][3 + i] = tmp_board._marbles[i][3]
         for i in range(3):
-            self._marbles[5][i] = tmp_board._marbles[self._count_row - i - 1][2]
+            self._marbles[i][5] = tmp_board._marbles[2][self._count_row - i - 1]
 
     def make_left_rotation_down_right(self):
         tmp_board = self.copy()
-        for i in range(3):
-            self._marbles[3 + i][3] = tmp_board._marbles[3][self._count_row - i - 1]
-        for i in range(3):
-            self._marbles[5][3 + i] = tmp_board._marbles[3 + i][3]
-        for i in range(3):
-            self._marbles[3 + i][5] = tmp_board._marbles[5][self._count_row - i - 1]
-        for i in range(3):
-            self._marbles[3][3 + i] = tmp_board._marbles[3 + i][5]
-
-    def make_right_rotation_down_right(self):
-        tmp_board = self.copy()
-        for i in range(3):
-            self._marbles[3 + i][3] = tmp_board._marbles[5][3 + i]
         for i in range(3):
             self._marbles[3][3 + i] = tmp_board._marbles[self._count_row - i - 1][3]
         for i in range(3):
             self._marbles[3 + i][5] = tmp_board._marbles[3][3 + i]
         for i in range(3):
             self._marbles[5][3 + i] = tmp_board._marbles[self._count_row - i - 1][5]
+        for i in range(3):
+            self._marbles[3 + i][3] = tmp_board._marbles[5][3 + i]
+
+    def make_right_rotation_down_right(self):
+        tmp_board = self.copy()
+        for i in range(3):
+            self._marbles[3][3 + i] = tmp_board._marbles[3 + i][5]
+        for i in range(3):
+            self._marbles[3 + i][3] = tmp_board._marbles[3][self._count_row - i - 1]
+        for i in range(3):
+            self._marbles[5][3 + i] = tmp_board._marbles[3 + i][3]
+        for i in range(3):
+            self._marbles[3 + i][5] = tmp_board._marbles[5][self._count_row - i - 1]
 
     def make_rotation(self, quarter, rotation):
         if quarter == 0:
@@ -142,3 +142,51 @@ class Board:
     def make_move(self, move, color):
         self.put_marble(move.col, move.row, color)
         self.make_rotation(move.quarter, move.rotation)
+
+    def check_horizontal_and_vertical(self):
+        win_list = []
+        for i in range(self._count_col):
+            for step in range(2):
+                color_horizontal = self._marbles[step][i]
+                color_vertical = self._marbles[i][step]
+                check_horizontal = True
+                check_vertical = True
+                for j in range(step, 4 + step):
+                    if color_horizontal != self._marbles[j][i] and self._marbles[j][i] != -1:
+                        check_horizontal = False
+                    if color_vertical != self._marbles[i][j] and self._marbles[i][j] != -1:
+                        check_vertical = False
+                if check_horizontal == True:
+                    for j in range(step, 4 + step):
+                        win_list[j - step].append([j, i])
+                    return win_list
+                if check_vertical == True:
+                    for j in range(step, 4 + step):
+                        win_list[j - step].append([i, j])
+                    return win_list
+        return win_list
+
+    def check_diagonal(self):
+        win_list = []
+        for step in range(2):
+            color_left = self._marbles[step][step]
+            color_right = self._marbles[5 - step][step]
+            check_left = True
+            check_right = True
+            for i in range(step, 4 + step):
+                if color_left != self._marbles[i][i] and self._marbles[i][i] != -1:
+                    check_left = False
+                if color_right != self._marbles[5 - i][i] and self._marbles[5 - i][i] != -1:
+                    check_right = False
+            if check_left == True:
+                for i in range(step, 4 + step):
+                    win_list[i - step].append([i, i])
+                return win_list
+            if check_right == True:
+                for i in range(step, 4 + step):
+                    win_list[i - step].append([5 - i, i])
+                return win_list
+# todo up, down diagonals check
+
+
+
