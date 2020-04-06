@@ -156,15 +156,15 @@ class Board:
                         check_horizontal = False
                     if color_vertical != self._marbles[i][j] and self._marbles[i][j] != -1:
                         check_vertical = False
-                if check_horizontal == True:
+                if check_horizontal:
                     for j in range(step, 4 + step):
                         win_list[j - step].append([j, i])
                     return win_list
-                if check_vertical == True:
+                if check_vertical:
                     for j in range(step, 4 + step):
                         win_list[j - step].append([i, j])
                     return win_list
-        return win_list
+        return None
 
     def check_diagonal(self):
         win_list = []
@@ -178,15 +178,48 @@ class Board:
                     check_left = False
                 if color_right != self._marbles[5 - i][i] and self._marbles[5 - i][i] != -1:
                     check_right = False
-            if check_left == True:
+            if check_left:
                 for i in range(step, 4 + step):
                     win_list[i - step].append([i, i])
                 return win_list
-            if check_right == True:
+            if check_right:
                 for i in range(step, 4 + step):
                     win_list[i - step].append([5 - i, i])
                 return win_list
-# todo up, down diagonals check
+        for step in range(2):
+            color = self._marbles[1 - step][step]
+            check = True
+            for i in range(5):
+                if color != self._marbles[1 - step + i][step + i]:
+                    check = False
+                    break
+            if check:
+                for i in range(5):
+                    win_list[i].append([1 - step + i, step + i])
+                return win_list
+        for step in range(2):
+            color = self._marbles[4 + step][step]
+            check = True
+            for i in range(5):
+                if color != self._marbles[4 + step - i][step + i]:
+                    check = False
+                    break
+            if check:
+                for i in range(5):
+                    win_list[i].append([4 + step - i, step + i])
+                return win_list
+        return None
+
+    def check_win_line(self):
+        win_line = self.check_horizontal_and_vertical()
+        if win_line is not None:
+# todo - win
+            return win_line
+        win_line = self.check_diagonal()
+        if win_line is not None:
+# todo - win 
+            return win_line
+
 
 
 
