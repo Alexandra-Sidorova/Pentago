@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>640</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>640</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>640</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="marble_00">
+   <property name="geometry">
+    <rect>
+     <x>75</x>
+     <y>115</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="cursor">
+    <cursorShape>ArrowCursor</cursorShape>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_10">
+   <property name="geometry">
+    <rect>
+     <x>155</x>
+     <y>115</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_20">
+   <property name="geometry">
+    <rect>
+     <x>235</x>
+     <y>115</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_40">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>115</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_30">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>115</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_50">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>115</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_51">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>195</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_41">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>195</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_11">
+   <property name="geometry">
+    <rect>
+     <x>155</x>
+     <y>195</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_01">
+   <property name="geometry">
+    <rect>
+     <x>75</x>
+     <y>195</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_21">
+   <property name="geometry">
+    <rect>
+     <x>235</x>
+     <y>195</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_31">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>195</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_02">
+   <property name="geometry">
+    <rect>
+     <x>75</x>
+     <y>275</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_32">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>275</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_42">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>275</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_22">
+   <property name="geometry">
+    <rect>
+     <x>235</x>
+     <y>275</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_12">
+   <property name="geometry">
+    <rect>
+     <x>155</x>
+     <y>275</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_52">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>275</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_03">
+   <property name="geometry">
+    <rect>
+     <x>75</x>
+     <y>370</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_55">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>530</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_45">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>530</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_53">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>370</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_23">
+   <property name="geometry">
+    <rect>
+     <x>235</x>
+     <y>370</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_43">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>370</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_34">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>450</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_35">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>530</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_33">
+   <property name="geometry">
+    <rect>
+     <x>330</x>
+     <y>370</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_24">
+   <property name="geometry">
+    <rect>
+     <x>235</x>
+     <y>450</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_54">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>450</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_14">
+   <property name="geometry">
+    <rect>
+     <x>155</x>
+     <y>450</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_15">
+   <property name="geometry">
+    <rect>
+     <x>155</x>
+     <y>530</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_44">
+   <property name="geometry">
+    <rect>
+     <x>410</x>
+     <y>450</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_25">
+   <property name="geometry">
+    <rect>
+     <x>235</x>
+     <y>530</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_04">
+   <property name="geometry">
+    <rect>
+     <x>75</x>
+     <y>450</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_05">
+   <property name="geometry">
+    <rect>
+     <x>75</x>
+     <y>530</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="marble_13">
+   <property name="geometry">
+    <rect>
+     <x>155</x>
+     <y>370</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/default_marble.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="player_1">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Primary Elector </family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Player 1:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="player_2">
+   <property name="geometry">
+    <rect>
+     <x>460</x>
+     <y>10</y>
+     <width>171</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Primary Elector </family>
+     <pointsize>13</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Player 2:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="to_left_part">
+   <property name="geometry">
+    <rect>
+     <x>61</x>
+     <y>101</y>
+     <width>250</width>
+     <height>250</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/board_part.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="down_right_part">
+   <property name="geometry">
+    <rect>
+     <x>317</x>
+     <y>357</y>
+     <width>250</width>
+     <height>250</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/board_part.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="down_left_part">
+   <property name="geometry">
+    <rect>
+     <x>61</x>
+     <y>357</y>
+     <width>250</width>
+     <height>250</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/board_part.png</pixmap>
+   </property>
+  </widget>
+  <widget class="QLabel" name="top_right_part">
+   <property name="geometry">
+    <rect>
+     <x>317</x>
+     <y>101</y>
+     <width>250</width>
+     <height>250</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>../resources/board_part.png</pixmap>
+   </property>
+  </widget>
+  <zorder>down_right_part</zorder>
+  <zorder>down_left_part</zorder>
+  <zorder>top_right_part</zorder>
+  <zorder>to_left_part</zorder>
+  <zorder>gridLayoutWidget</zorder>
+  <zorder>marble_00</zorder>
+  <zorder>marble_10</zorder>
+  <zorder>marble_20</zorder>
+  <zorder>marble_40</zorder>
+  <zorder>marble_30</zorder>
+  <zorder>marble_50</zorder>
+  <zorder>marble_51</zorder>
+  <zorder>marble_41</zorder>
+  <zorder>marble_11</zorder>
+  <zorder>marble_01</zorder>
+  <zorder>marble_21</zorder>
+  <zorder>marble_31</zorder>
+  <zorder>marble_02</zorder>
+  <zorder>marble_32</zorder>
+  <zorder>marble_42</zorder>
+  <zorder>marble_22</zorder>
+  <zorder>marble_12</zorder>
+  <zorder>marble_52</zorder>
+  <zorder>marble_03</zorder>
+  <zorder>marble_55</zorder>
+  <zorder>marble_45</zorder>
+  <zorder>marble_53</zorder>
+  <zorder>marble_23</zorder>
+  <zorder>marble_43</zorder>
+  <zorder>marble_34</zorder>
+  <zorder>marble_35</zorder>
+  <zorder>marble_33</zorder>
+  <zorder>marble_24</zorder>
+  <zorder>marble_54</zorder>
+  <zorder>marble_14</zorder>
+  <zorder>marble_15</zorder>
+  <zorder>marble_44</zorder>
+  <zorder>marble_25</zorder>
+  <zorder>marble_04</zorder>
+  <zorder>marble_05</zorder>
+  <zorder>marble_13</zorder>
+  <zorder>player_1</zorder>
+  <zorder>player_2</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

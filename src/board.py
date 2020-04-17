@@ -217,7 +217,7 @@ class Board:
             return win_line
         win_line = self.check_diagonal()
         if win_line is not None:
-# todo - win 
+# todo - win
             return win_line
 
 
