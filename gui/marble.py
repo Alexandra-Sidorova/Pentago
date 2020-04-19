@@ -4,13 +4,14 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.Qt import pyqtSignal
 from PyQt5 import QtCore
 
+
 # -1 - default, 0 - white, 1 - black
 
 class MarbleInterface(QLabel):
-    def __init__(self, parent, x, y):
+    def __init__(self, parent, x, y, color=-1):
         super().__init__(parent)
         self.resize(60, 60)
-        self._color = -1
+        self._color = color
         self.x = x
         self.y = y
         self.move(self.x, self.y)

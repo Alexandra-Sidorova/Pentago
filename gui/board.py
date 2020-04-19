@@ -27,8 +27,8 @@ class BoardInterface(QWidget):
         parts[3].move(251, 251)
         return parts
 
-    def __set_default_marbles(self):
-        marbles = []
+    def __update(self, marbles):
+        marbles_list = []
         for x in range(6):
             for y in range(6):
                 if x >= 3:
@@ -39,9 +39,9 @@ class BoardInterface(QWidget):
                     step_y = 25
                 else:
                     step_y = 15
-                marble = MarbleInterface(self, step_x + x * 80, step_y + y * 80)
-                marbles.append(marble)
-        return marbles
+                marble = MarbleInterface(self, step_x + x * 80, step_y + y * 80, marbles[x][y])
+                marbles_list.append(marble)
+        return marbles_list
 
 
 class BoardPart(QLabel):
