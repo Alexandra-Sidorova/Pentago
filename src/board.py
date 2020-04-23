@@ -12,13 +12,15 @@ from src.move import Move
 
 
 class Board:
-    def __init__(self, marbles=[]):
-        self._marbles = marbles
+    def __init__(self, marbles=None):
         self._count_row = 6
         self._count_col = 6
         self._color_AI = None
         self.last_move = None
-        self.new()
+        if marbles is not None:
+            self._marbles = marbles
+        else:
+            self.new()
 
     def new(self):
         self._marbles = []
