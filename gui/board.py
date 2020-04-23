@@ -4,15 +4,15 @@ from PyQt5.QtGui import QPixmap
 from PyQt5.Qt import pyqtSignal
 from PyQt5 import QtCore
 from gui.marble import MarbleInterface
+from src.board import Board
 
 
 class BoardInterface(QWidget):
-    def __init__(self):
+    def __init__(self, board):
         super().__init__()
         self.resize(500, 500)
         self._parts = self.__create_parts()
-        self._marbles = self.__set_default_marbles()
-
+        self._marbles = self.__update(board.get_marbles())
 
     def __create_parts(self):
         parts = []
@@ -78,7 +78,8 @@ class BoardPart(QLabel):
 
 def main():
     app = QApplication([])
-    main_window = BoardInterface()
+    board = Board()
+    main_window = BoardInterface(board)
     main_window.show()
     sys.exit(app.exec_())
 

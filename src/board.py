@@ -1,5 +1,5 @@
 from src.player import Player
-
+from src.move import Move
 """"
 00 01 02  03 04 05
 10 11 12  13 14 15
@@ -14,20 +14,34 @@ from src.player import Player
 class Board:
     def __init__(self, marbles=[]):
         self._marbles = marbles
-        self._count_col = 6
         self._count_row = 6
+        self._count_col = 6
+        self._color_AI = None
+        self.last_move = None
+        self.new()
 
     def new(self):
-        self._marbles = [-1] * self._count_col
-        for i in range(self._count_col):
-            self._marbles[i] = [-1] * self._count_row
+        self._marbles = []
+        for i in range(self._count_row):
+            self._marbles.append([])
+            for j in range(self._count_col):
+                self._marbles[i].append(-1)
 
     def copy(self):
         copy_board = Board(self._marbles)
         return copy_board
 
-    def put_marble(self, col, row, color):
-        self._marbles[col][row] = color
+    def get_marbles(self):
+        return self._marbles
+
+    def __set_color_AI(self, color):
+        self._color_AI = color
+
+    def put_marble(self, row, col, color):
+        self._marbles[row][col] = color
+
+    def is_valid_move(self, row, col):
+        return self._marbles[row][col] == -1
 
     def make_left_rotation_top_right(self):
         tmp_board = self.copy()
@@ -140,8 +154,10 @@ class Board:
                 self.make_right_rotation_down_right()
 
     def make_move(self, move, color):
-        self.put_marble(move.col, move.row, color)
-        self.make_rotation(move.quarter, move.rotation)
+        if self.is_valid_move(move.row, move.col):
+            self.put_marble(move.row, move.col, color)
+            self.make_rotation(move.quarter, move.rotation)
+            self._last_move = move
 
     def check_horizontal_and_vertical(self):
         win_list = []
@@ -209,6 +225,50 @@ class Board:
                     win_list[i].append([4 + step - i, step + i])
                 return win_list
         return None
+
+    def get_utility(self, color):
+        utility = 0
+        streak = 0
+        for i in range(6):
+            for j in range(5):
+                if (self._marbles[i][j] == color) and (self._marbles[i][j + 1] == color):
+                    utility += streak + 1
+                    streak += 1
+                else:
+                    streak = 0
+        for i in range(6):
+            for j in range(5):
+                if (self._marbles[j][i] == color) and (self._marbles[j + 1][i] == color):
+                    utility += streak + 1
+                    streak += 1
+                else:
+                    streak = 0
+        for i in range(5):
+            if (self._marbles[i][i] == color) and (self._marbles[i + 1][i + 1] == color):
+                utility += streak + 1
+                streak += 1
+            else:
+                streak = 0
+        for i in range(5):
+            if (self._marbles[i][5 - i] == color) and (self._marbles[i + 1][4 - i] == color):
+                utility += streak + 1
+                streak += 1
+            else:
+                streak = 0
+        return utility
+
+    def list_children(self):
+        children = []
+        for x in range(6):
+            for y in range(6):
+                for quarter in range(4):
+                    for rotation in (2):
+                        if self.is_valid_move():
+                            temp_board = self.copy()
+                            move = Move(x, y, quarter, rotation)
+                            temp_board.make_move(move,  self._color_AI)
+                            children.append(temp_board)
+        return children
 
     def check_win_line(self):
         win_line = self.check_horizontal_and_vertical()

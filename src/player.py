@@ -13,5 +13,6 @@ class Player:
     def color(self):
         return self._color
 
-    def move(self, row, col, quarter, rotation):
+    def move(self, board, row, col, quarter, rotation):
         self._prev_move = Move(row, col, quarter, rotation)
+        board.make_move(self._prev_move, self._color)
